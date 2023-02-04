@@ -19,5 +19,7 @@ public class controller : MonoBehaviour
         Vector3 mov = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
 
         control.Move(mov * vel * Time.deltaTime);
+
+        //hola esto es un comit innecesario
     }
 }
