@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class controller : MonoBehaviour
+public class Example : MonoBehaviour
 {
     public CharacterController control;
     public Rigidbody rb;
@@ -23,7 +23,7 @@ public class controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        groundedPlayer = controller.isGrounded;
+        groundedPlayer = control.isGrounded;
         
         if (groundedPlayer && playerVelocity.y < 0)
         {
@@ -43,6 +43,6 @@ public class controller : MonoBehaviour
         }
 
         playerVelocity.y += gravityValue * Time.deltaTime;
-        control.Move(mov * vel * Time.deltaTime);
+        control.Move(move * vel * Time.deltaTime);
     }
 }
