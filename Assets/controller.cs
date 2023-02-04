@@ -5,12 +5,14 @@ using UnityEngine;
 public class controller : MonoBehaviour
 {
     public CharacterController control;
+    public Rigidbody rb;
     public float vel = 5f;
 
     // Start is called before the first frame update
     void Start()
     {
         control = GetComponent<CharacterController>();
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
